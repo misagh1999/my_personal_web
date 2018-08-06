@@ -40,7 +40,7 @@
 
       <div class="row">
         <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-justify">
+          <div class="card text-justify border-danger">
             <div class="card-header">
               <h4 class="card-title my-auto">معرفی سایت</h4>
             </div>
@@ -51,7 +51,7 @@
           </div><!--card1-->
         </div><!--col1-->
         <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-justify">
+          <div class="card text-justify border-danger">
             <div class="card-header">
               <h4 class="card-title my-auto">اولین روز دانشگاه</h4>
             </div>
@@ -62,7 +62,7 @@
           </div><!--card1-->
         </div><!--col2-->
         <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-justify">
+          <div class="card text-justify border-danger">
             <div class="card-header">
               <h4 class="card-title my-auto">اولین روز دانشگاه</h4>
             </div>
@@ -73,7 +73,7 @@
           </div><!--card1-->
         </div><!--col3-->
         <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-justify">
+          <div class="card text-justify border-danger">
             <div class="card-header">
               <h4 class="card-title my-auto">بی انگیزگی در دانشگاه</h4>
             </div>
@@ -86,7 +86,7 @@
       </div><!--row-->
 
       <div class="footer text-center bg-dark text-light py-3 mb-1">
-        <p class="lead text-capitalize my-auto">Designed By mohammadhoseein misaghpoor</p>
+        <p class="lead text-capitalize my-auto text-danger">Designed By mohammadhoseein misaghpoor</p>
       </div><!--footer-->
     </div><!--container-->
 
