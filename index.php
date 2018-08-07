@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="utf-8">
-    <title>وب سایت شخصی محمدحسین میثاق پور</title>
+    <title>وب سایت شخصی</title>
     <meta name="viewport" content="width=device-width , initial-scale=1">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <script src="script/jquery.min.js"></script>
@@ -29,8 +29,9 @@
           </li>
         </ul><!--navbar nav-->
       </div><!--navbar-->
-      <div class="jumbotron text-justify">
+      <div class="jumbotron text-justify rounded" style="background-color:orange;border:2px solid red">
         <h1>به وب سایت من خوش آمدید</h1>
+        <img src="img/mypic.jpg" alt="My picture" class="float-left m-2 rounded-circle" style="width:100px;border:2px red solid">
         <p class="lead">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم. همچنین سعی می کنم که مطالب آموزشی مفید شامل معرفی منابع, کتاب و مقالات علمی هم قرار بدم.تمام تلاشم بر اینه که توی این وبسایت مطالب دست اول و جدیدی رو قرار بدم و اونا رو از منظر خاصی بررسی کنم.
 از این که ما رو همراهی می کنید صمیمانه متشکرم :)
 </p>
