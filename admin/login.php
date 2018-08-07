@@ -29,7 +29,7 @@
         <input type="password" name="password" class="form-control" id="pswd" placeholder="رمز عبور">
       </div>
       <button type="submit" name="button" class="btn btn-success btn-block">ورود</button>
-      <a href="#" class="btn btn-secondary btn-block">بازگشت به خانه</a>
+      <a href="../index.php" class="btn btn-secondary btn-block">بازگشت به خانه</a>
     </form>
   </div>
   </div>

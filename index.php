@@ -16,19 +16,29 @@
   }
 </style>
     <div class="container">
-      <div class="navbar navbar-expand bg-dark navbar-dark mb-2 mt-1">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link active">صفحه اصلی</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">مقالات</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">درباره سایت</a>
-          </li>
-        </ul><!--navbar nav-->
-      </div><!--navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end sticky-top my-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="#" class="nav-link">صفحه اصلی</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="article" data-toggle="dropdown">مقالات</a>
+              <div class="dropdown-menu text-right" aria-labelledby="article">
+                <a href="#" class="dropdown-item">کامپیوتر</a>
+                <a href="#" class="dropdown-item">آموزشی</a>
+                <a href="#" class="dropdown-item">سرگرمی</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">درباره سایت</a>
+            </li>
+          </ul>
+        </div><!--collapse-->
+      </nav><!--navbar-->
       <div class="jumbotron text-justify rounded" style="background-color:orange;border:2px solid red">
         <h1>به وب سایت من خوش آمدید</h1>
         <img src="img/mypic.jpg" alt="My picture" class="float-left m-2 rounded-circle" style="width:100px;border:2px red solid">
