@@ -30,11 +30,11 @@
               <div class="dropdown-menu text-right" aria-labelledby="article">
                 <a href="#" class="dropdown-item">کامپیوتر</a>
                 <a href="#" class="dropdown-item">آموزشی</a>
-                <a href="#" class="dropdown-item">سرگرمی</a>
+                <a href="#" class="dropdown-item">سرگرمی ها</a>
               </div>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">درباره سایت</a>
+              <a href="#" class="nav-link">درباره ما</a>
             </li>
           </ul>
         </div><!--collapse-->
@@ -57,7 +57,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم.</p>
-              <a href="#" class="card-link btn btn-info float-left">ادامه مطلب...</a>
+              <a href="readmore.php" class="card-link btn btn-info float-left">ادامه مطلب...</a>
             </div>
           </div><!--card1-->
         </div><!--col1-->
@@ -68,7 +68,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم.</p>
-              <a href="#" class="card-link btn btn-info float-left">ادامه مطلب...</a>
+              <a href="readmore.php" class="card-link btn btn-info float-left">ادامه مطلب...</a>
             </div>
           </div><!--card1-->
         </div><!--col2-->
@@ -79,7 +79,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم.</p>
-              <a href="#" class="card-link btn btn-info float-left">ادامه مطلب...</a>
+              <a href="readmore.php" class="card-link btn btn-info float-left">ادامه مطلب...</a>
             </div>
           </div><!--card1-->
         </div><!--col3-->
@@ -90,7 +90,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم.</p>
-              <a href="#" class="card-link btn btn-info float-left">ادامه مطلب...</a>
+              <a href="readmore.php" class="card-link btn btn-info float-left">ادامه مطلب...</a>
             </div>
           </div><!--card1-->
         </div><!--col4-->
