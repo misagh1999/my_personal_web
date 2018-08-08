@@ -19,7 +19,15 @@
   <div class="container">
     <div class="jumbotron my-5 bg-light" style="border: red solid 2px;">
     <h1 class="text-center">صفحه ورود</h1>
-    <form class="" action="check.php" method="post">
+    <?php
+      if(isset($_GET["empty"])){
+        echo '<center><p class="text-danger">نام کاربری یا رمز عبور خالی است.</p></center>';
+      }
+      if(isset($_GET["error"])){
+        echo '<center><p class="text-danger">رمز عبور یا نام کاربری اشتباه وارد شده است.</p></center>';
+      }
+     ?>
+    <form action="check.php" method="post">
       <div class="form-group text-right">
         <label for="usr">نام کاربری:</label>
         <input type="text" name="username" class="form-control" id="usr" placeholder="نام کاربری">
@@ -28,7 +36,7 @@
         <label for="pswd">رمز عبور:</label>
         <input type="password" name="password" class="form-control" id="pswd" placeholder="رمز عبور">
       </div>
-      <button type="submit" name="button" class="btn btn-success btn-block">ورود</button>
+      <button type="submit" name="loginbtn" class="btn btn-success btn-block">ورود</button>
       <a href="../index.php" class="btn btn-secondary btn-block">بازگشت به خانه</a>
     </form>
   </div>
