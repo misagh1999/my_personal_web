@@ -1,5 +1,13 @@
 <?php include("header-panel.php") ?>
-
+<?php include("config.php") ?>
+<?php
+if(isset($_GET["okdel"])){
+  echo '<center><h4 class="text-success">پست شما با موفقیت حذف شد</h4></center>';
+}
+if(isset($_GET["nodel"])){
+  echo '<center><h4 class="text-danger">متاسفانه پست شما حذف نشد</h4></center>';
+}
+?>
     <h2 class="text-center">آخرین پست ها</h2>
     <table class="table text-right table-striped">
       <thead>
@@ -9,14 +17,23 @@
         </tr>
       </thead>
       <tbody>
+
+<?php
+  $n=1;
+  $postsql="SELECT * FROM `post` ORDER BY `id` DESC ";
+  $sqlquery=mysqli_query($conn,$postsql);
+  while ($postfetch=mysqli_fetch_assoc($sqlquery))
+   {
+ ?>
         <tr>
-          <th scope="row">1</th>
-          <td>اولین روز دانشگاه</td>
+          <th scope="row"><?php echo $n++; ?></th>
+          <td><a href=<?php echo "../readmore.php?postid=$postfetch[id]"; ?>><?php echo $postfetch["title"]; ?></a></td>
+          <td><a href=<?php echo "editepost.php?postid=$postfetch[id]"; ?>>ویرایش</a></td>
+          <td><a href=<?php echo "check.php?delpost=$postfetch[id]"; ?>>حذف</a></td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>اولین روز دانشگاه</td>
-        </tr>
+<?php
+ }
+ ?>
       </tbody>
     </table>
   </div>
