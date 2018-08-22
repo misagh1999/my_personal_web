@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
@@ -25,6 +26,9 @@
       }
       if(isset($_GET["error"])){
         echo '<center><p class="text-danger">رمز عبور یا نام کاربری اشتباه وارد شده است.</p></center>';
+      }
+      if(isset($_GET["exit"])){
+        echo '<center><p class="text-success">شما با موفقیت خارج شدید</p></center>';
       }
      ?>
     <form action="check.php" method="post">

@@ -1,4 +1,7 @@
-<?php include("config.php"); ?>
+<?php
+session_start();
+
+include("config.php"); ?>
 <?php
 
 if(isset($_GET["exit"])) {
@@ -6,21 +9,30 @@ if(isset($_GET["exit"])) {
   header("location:../index.php");
   exit;
 }
+#--- login admin
 
 if(isset($_POST["loginbtn"])){
   if(empty($_POST["username"]) || empty($_POST["password"])){
     header("location:login.php?empty=1010");
     exit;
   }
-  if($_POST["username"]=='admin' && $_POST["password"]=='admin'){
-    setcookie("admin","admin",time()+(86400*7));
-    header("location:dashboard.php");
-    exit;
+  $query="SELECT * FROM `user`";
+  $sqlquery=mysqli_query($conn,$query);
+  while($userfetch=mysqli_fetch_assoc($sqlquery)){
+    if($_POST["username"]==$userfetch['username'] && $_POST["password"]==$userfetch['password']){
+      $_SESSION['username']=$userfetch['username'];
+      $_SESSION['password']=$userfetch['password'];
+      $_SESSION['id_user']=$userfetch['id'];
+      $_SESSION['lname']=$userfetch['lname'];
+      $_SESSION['fname']=$userfetch['fname'];
+      $_SESSION['img_user']=$userfetch['img'];
+      $_SESSION['about_user']=$userfetch['about'];
+      header("location:dashboard.php");
+      exit;
+    }
   }
-  else {
     header("location:login.php?error=1010");
     exit;
-  }
 }
 
 if (isset($_POST["sendpostbtn"])) {

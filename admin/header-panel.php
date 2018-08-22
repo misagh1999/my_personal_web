@@ -1,5 +1,6 @@
 <?php
-  if(!isset($_COOKIE["admin"])){
+session_start();
+  if(!$_SESSION['username']){
     header("location:../index.php");
     exit;
   }
@@ -60,10 +61,19 @@
           <a href="addpost.php" class="nav-link">افزودن پست جدید</a>
         </li>
         <li class="nav-item">
-          <a href="editepost.php" class="nav-link">ویرایش پست ها</a>
+          <a href="editepost.php" class="nav-link">مدیریت پست ها</a>
         </li>
         <li class="nav-item">
-          <a href="<?php echo 'check.php?exit="3059"'  ?> class="nav-link">خروج</a>
+          <a href="#" class="nav-link">مدیریت بخش های ویژه</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">تنظیمات کاربری</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link"><?php echo $_SESSION['lname']. " ". $_SESSION['fname'];?></a>
+        </li>
+        <li class="nav-item">
+          <a href="exit.php" class="nav-link">خروج</a>
         </li>
       </ul>
     </nav>
