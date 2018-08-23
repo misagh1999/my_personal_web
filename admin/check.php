@@ -130,5 +130,49 @@ if(isset($_POST['btn_user_edit'])){
   }
 }
 
+#------ edit special post
+
+    #----- edit wellcome post
+if(isset($_POST['btn_wel_edit'])){
+  if(empty($_POST['edit_title_wel']) || empty($_POST['edit_content_wel'])){
+    header("location:special-posts.php?empty_w=1");
+    exit;
+  }
+  else{
+    $new_title=$_POST['edit_title_wel'];
+    $new_content=$_POST['edit_content_wel'];
+    $query="UPDATE `welcome` SET `title` = '".$new_title."', `content` = '".$new_content."' WHERE `welcome`.`id` = 1;";
+    $sendquery=mysqli_query($conn,$query);
+    if($sendquery){
+      header("location:special-posts.php?okup_w=1");
+      exit;
+    }
+    else{
+      header("location:special-posts.php?noup_w=1");
+      exit;
+    }
+  }
+}
+
+    #----- edit about post
+if(isset($_POST['btn_about_edit'])){
+  if(empty($_POST['edit_content_about'])){
+    header("location:special-posts.php?empty_a=1");
+    exit;
+  }
+  else{
+    $new_content=$_POST['edit_content_about'];
+    $query="UPDATE `about_us` SET `content` = '".$new_content."' WHERE `about_us`.`id` = 1;";
+    $sendquery=mysqli_query($conn,$query);
+    if($sendquery){
+      header("location:special-posts.php?okup_a=1");
+      exit;
+    }
+    else{
+      header("location:special-posts.php?noup_a=1");
+      exit;
+    }
+  }
+}
 
  ?>
