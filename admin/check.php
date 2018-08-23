@@ -97,4 +97,38 @@ if(isset($_POST["updatepostbtn"])){
 }
 
 
+#--------edit user information
+
+if(isset($_POST['btn_user_edit'])){
+  if(empty($_POST['user_edit']) || empty($_POST['lname_edit']) || empty($_POST['fname_edit']) || empty($_POST['pass_edit']) || empty($_POST['about_edit'])){
+    header("location:user-setting.php?empty=1");
+    exit;
+  }
+  else{
+    $new_username=$_POST['user_edit'];
+    $new_lname=$_POST['lname_edit'];
+    $new_fname=$_POST['fname_edit'];
+    $new_pass=$_POST['pass_edit'];
+    $new_about=$_POST['about_edit'];
+    $id=$_SESSION['id_user'];
+    $query="UPDATE `user` SET `username` = '".$new_username."', `password` = '".$new_pass."', `lname` = '".$new_lname."', `fname` = '".$new_fname."', `img` = '1', `about` = '".$new_about."' WHERE `user`.`id` = $id;";
+    $sendquery=mysqli_query($conn,$query);
+    if($sendquery){
+      $_SESSION['username']=$new_username;
+      $_SESSION['password']=$new_pass;
+      $_SESSION['lname']=$new_lname;
+      $_SESSION['fname']=$new_fname;
+    //  $_SESSION['img_user']=
+      $_SESSION['about_user']=$new_about;
+      header("location:user-setting.php?okupdate=1");
+      exit;
+    }
+    else{
+      header("location:user-setting.php?noupdate=1");
+      exit;
+    }
+  }
+}
+
+
  ?>

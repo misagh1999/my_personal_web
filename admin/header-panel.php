@@ -61,16 +61,13 @@ session_start();
           <a href="addpost.php" class="nav-link">افزودن پست جدید</a>
         </li>
         <li class="nav-item">
-          <a href="editepost.php" class="nav-link">مدیریت پست ها</a>
+          <a href="manage-posts.php" class="nav-link">مدیریت پست ها</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">مدیریت بخش های ویژه</a>
+          <a href="special-posts.php" class="nav-link">مدیریت بخش های ویژه</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">تنظیمات کاربری</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link"><?php echo $_SESSION['lname']. " ". $_SESSION['fname'];?></a>
+          <a href="user-setting.php" class="nav-link">تنظیمات کاربری</a>
         </li>
         <li class="nav-item">
           <a href="exit.php" class="nav-link">خروج</a>

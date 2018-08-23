@@ -52,14 +52,6 @@
             <li class="nav-item">
               <a href="index.php" class="nav-link">صفحه اصلی</a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="article" data-toggle="dropdown">مقالات</a>
-              <div class="dropdown-menu text-right" aria-labelledby="article">
-                <a href="#" class="dropdown-item">کامپیوتر</a>
-                <a href="#" class="dropdown-item">آموزشی</a>
-                <a href="#" class="dropdown-item">سرگرمی ها</a>
-              </div>
-            </li>
             <li class="nav-item">
               <a href="#" class="nav-link">درباره ما</a>
             </li>
