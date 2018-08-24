@@ -30,7 +30,7 @@ $wellcome=mysqli_fetch_assoc($wel_query);
               <h4 class="card-title my-auto"><?php echo $postfetch["title"]; ?></h4>
             </div>
             <div class="card-body">
-              <p class="card-text"><?php echo post_content($postfetch["content"]); ?></p>
+              <p class="card-text"><?php echo nl2br(post_content($postfetch["content"])); ?></p>
               <a href="<?php echo "readmore.php?postid=$postfetch[id]"; ?>" class="card-link btn btn-info float-left">ادامه مطلب...</a>
             </div>
           </div><!--card-->

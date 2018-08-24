@@ -5,6 +5,11 @@ include("header-panel.php");
 
  ?>
  <h2 class="text-center">آخرین پست ها</h2>
+ <?php
+ if(isset($_SESSION['msg'])){
+   show_message();
+ }
+ ?>
  <table class="table text-right table-striped">
    <thead>
      <tr>

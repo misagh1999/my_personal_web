@@ -41,6 +41,8 @@ if(isset($_POST["loginbtn"])){
     exit;
 }
 
+#----- send post----
+
 if (isset($_POST["sendpostbtn"])) {
   if(empty($_POST["titlepost"]) || empty($_POST["contentpost"])){
     send_message('empty');
@@ -73,12 +75,12 @@ if(isset($_GET["delpost"])){
   $postquery=mysqli_query($conn,$postdel);
   if($postquery){
     send_message('ok_del');
-    header("location:dashboard.php");
+    header("location:manage-posts.php");
     exit;
   }
   else {
     send_message('no_del');
-    header("location:dashboard.php");
+    header("location:manage-posts.php");
     exit;
   }
 }

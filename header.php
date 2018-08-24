@@ -53,7 +53,7 @@
               <a href="index.php" class="nav-link">صفحه اصلی</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">درباره ما</a>
+              <a href="about_us.php" class="nav-link">درباره ما</a>
             </li>
           </ul>
         </div><!--collapse-->

@@ -27,6 +27,7 @@ include("../func/func.php");
       if(isset($_SESSION['msg'])){
         show_message();
       }
+      
     ?>
     <form action="check.php" method="post">
       <div class="form-group text-right">
