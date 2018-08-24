@@ -13,7 +13,7 @@ $wellcome=mysqli_fetch_assoc($wel_query);
         <h1><?php echo $wellcome['title']; ?></h1>
         <p class="lead"><?php echo $wellcome['content']; ?></p>
         <hr class="bg-danger">
-        <button type="button" class="btn btn-info float-left">شروع یادگیری</button>
+        <a class="btn btn-info float-left" href="about_us.php">درباره سایت</a>
       </div><!-- jumbotron-->
 
       <div class="row">
