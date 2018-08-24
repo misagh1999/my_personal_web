@@ -1,7 +1,9 @@
 <?php
+include("../func/func.php");
 session_start();
 session_unset();
 session_destroy();
-header("location:login.php?exit=1");
+send_message('ok_exit');
+header("location:login.php");
 exit;
  ?>

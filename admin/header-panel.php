@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../func/func.php");
   if(!$_SESSION['username']){
     header("location:../index.php");
     exit;

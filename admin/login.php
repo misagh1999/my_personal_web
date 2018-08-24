@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+include("../func/func.php");
+
+?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
@@ -21,16 +24,10 @@
     <div class="jumbotron my-5 bg-light" style="border: red solid 2px;">
     <h1 class="text-center">صفحه ورود</h1>
     <?php
-      if(isset($_GET["empty"])){
-        echo '<center><p class="text-danger">نام کاربری یا رمز عبور خالی است.</p></center>';
+      if(isset($_SESSION['msg'])){
+        show_message();
       }
-      if(isset($_GET["error"])){
-        echo '<center><p class="text-danger">رمز عبور یا نام کاربری اشتباه وارد شده است.</p></center>';
-      }
-      if(isset($_GET["exit"])){
-        echo '<center><p class="text-success">شما با موفقیت خارج شدید</p></center>';
-      }
-     ?>
+    ?>
     <form action="check.php" method="post">
       <div class="form-group text-right">
         <label for="usr">نام کاربری:</label>

@@ -11,6 +11,11 @@ $about=mysqli_fetch_assoc($about_conn);
 
 ?>
 <h2 class="text-right mb-3">خوشامدگویی</h2>
+<?php
+if(isset($_SESSION['msg'])){
+  show_message();
+}
+?>
 <form class="text-right" action="check.php" method="post">
   <div class="form-group">
     <label for="">عنوان:</label>
@@ -26,6 +31,11 @@ $about=mysqli_fetch_assoc($about_conn);
 <hr class="border border-danger">
 
 <h2 class="text-right mb-3">درباره ما</h2>
+<?php
+if(isset($_SESSION['msg'])){
+  show_message();
+}
+?>
 <form class="text-right" action="check.php" method="post">
   <div class="form-group">
     <label for="">متن:</label>

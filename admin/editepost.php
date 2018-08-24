@@ -3,15 +3,9 @@
     <h2 class="text-center">ویرایش پست ها</h2>
     <div class="jumbotron">
 <?php
-  if(isset($_GET["empty"])){
-    echo '<center><h4 class="text-danger">تمامی فیلدها باید پر باشد</h4></center>';
-  }
-  if(isset($_GET["okupdate"])){
-    echo '<center><h4 class="text-success>پست شما با موفقیت به روزرسانی شد</h4></center>';
-  }
-  if(isset($_GET["noupdate"])){
-    echo '<center><h4 class="text-danger">متاسفانه پست شما ویرایش نشد</h4></center>';
-  }
+if(isset($_SESSION['msg'])){
+  show_message();
+}
 ?>
 <?php
 if(!isset($_GET["postid"])){

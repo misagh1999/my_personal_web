@@ -1,12 +1,17 @@
-<?php include("header.php") ?>
-<?php include("admin/config.php") ?>
-<?php include("func/func.php") ?>
+<?php
+
+include("header.php");
+include("admin/config.php");
+include("func/func.php");
+$wel="SELECT * FROM `welcome`";
+$wel_query=mysqli_query($conn,$wel);
+$wellcome=mysqli_fetch_assoc($wel_query);
+
+?>
 
       <div class="jumbotron text-justify rounded" style="background-color:orange;border:2px solid red">
-        <h1>به وب سایت من خوش آمدید</h1>
-        <p class="lead">تصمیم گرفتم که بعد از مدت ها اقدام به ایجاد یک وبسایت شخصی برای انعکاس نظرها و ایده هام کنم تا از این طریق بتونم اونا رو با شما هم به اشتراک بذارم. تو این سایت قصد دارم که از فعالیت ها, سرگرمی ها, علایق و تجربه ها و خاطراتم دلنوشته هایی رو با شما به اشتراک بذارم. همچنین سعی می کنم که مطالب آموزشی مفید شامل معرفی منابع, کتاب و مقالات علمی هم قرار بدم.تمام تلاشم بر اینه که توی این وبسایت مطالب دست اول و جدیدی رو قرار بدم و اونا رو از منظر خاصی بررسی کنم.
-از این که ما رو همراهی می کنید صمیمانه متشکرم :)
-</p>
+        <h1><?php echo $wellcome['title']; ?></h1>
+        <p class="lead"><?php echo $wellcome['content']; ?></p>
         <hr class="bg-danger">
         <button type="button" class="btn btn-info float-left">شروع یادگیری</button>
       </div><!-- jumbotron-->

@@ -1,7 +1,11 @@
 <?php
 session_start();
+$_SESSION['msg'];
+$_SESSION['type_msg'];
+include("config.php");
+include("../func/func.php");
 
-include("config.php"); ?>
+?>
 <?php
 
 if(isset($_GET["exit"])) {
@@ -13,7 +17,8 @@ if(isset($_GET["exit"])) {
 
 if(isset($_POST["loginbtn"])){
   if(empty($_POST["username"]) || empty($_POST["password"])){
-    header("location:login.php?empty=1010");
+    send_message('empty');
+    header("location:login.php");
     exit;
   }
   $query="SELECT * FROM `user`";
@@ -31,13 +36,15 @@ if(isset($_POST["loginbtn"])){
       exit;
     }
   }
-    header("location:login.php?error=1010");
+    send_message('false');
+    header("location:login.php");
     exit;
 }
 
 if (isset($_POST["sendpostbtn"])) {
   if(empty($_POST["titlepost"]) || empty($_POST["contentpost"])){
-    header('location:addpost.php?empty=1010');
+    send_message('empty');
+    header('location:addpost.php');
     exit;
   }
   else {
@@ -46,11 +53,13 @@ if (isset($_POST["sendpostbtn"])) {
     $query="INSERT INTO `post` (`id`, `title`, `content`) VALUES (NULL, '".$posttitle."', '".$postcontent."');";
     $sendquery=mysqli_query($conn,$query);
     if($sendquery){
-      header("location:addpost.php?ok=1010");
+      send_message('ok_send');
+      header("location:addpost.php");
       exit;
     }
     else {
-      header("location:addpost.php?error=1010");
+      send_message('no_send');
+      header("location:addpost.php");
       exit;
     }
   }
@@ -63,11 +72,13 @@ if(isset($_GET["delpost"])){
   $postdel="DELETE FROM `post` WHERE `post`.`id` = $postid";
   $postquery=mysqli_query($conn,$postdel);
   if($postquery){
-    header("location:dashboard.php?okdel=1010");
+    send_message('ok_del');
+    header("location:dashboard.php");
     exit;
   }
   else {
-    header("location:dashboard.php?nodel=1010");
+    send_message('no_del');
+    header("location:dashboard.php");
     exit;
   }
 }
@@ -76,7 +87,8 @@ if(isset($_GET["delpost"])){
 
 if(isset($_POST["updatepostbtn"])){
   if(empty($_POST["editedtitle"]) || empty($_POST["editedcontent"])){
-    header("location:editepost.php?empty=1010");
+    send_message('empty');
+    header("location:editepost.php");
     exit;
   }
   else{
@@ -86,11 +98,13 @@ if(isset($_POST["updatepostbtn"])){
     $editpost="UPDATE `post` SET `title` = '".$newtitle."', `content` = '".$newcontent."' WHERE `post`.`id` = ".$postid.";";
     $postquery=mysqli_query($conn,$editpost);
     if($postquery){
-      header("location:editepost.php?okupdate=1010");
+      send_message('ok_up');
+      header("location:editepost.php");
       exit;
     }
     else {
-      header("location:editepost.php?noupdate=1010");
+      send_message('no_up');
+      header("location:editepost.php");
       exit;
     }
   }
@@ -101,7 +115,8 @@ if(isset($_POST["updatepostbtn"])){
 
 if(isset($_POST['btn_user_edit'])){
   if(empty($_POST['user_edit']) || empty($_POST['lname_edit']) || empty($_POST['fname_edit']) || empty($_POST['pass_edit']) || empty($_POST['about_edit'])){
-    header("location:user-setting.php?empty=1");
+    send_message('empty');
+    header("location:user-setting.php");
     exit;
   }
   else{
@@ -120,11 +135,13 @@ if(isset($_POST['btn_user_edit'])){
       $_SESSION['fname']=$new_fname;
     //  $_SESSION['img_user']=
       $_SESSION['about_user']=$new_about;
-      header("location:user-setting.php?okupdate=1");
+      send_message('ok_up');
+      header("location:user-setting.php");
       exit;
     }
     else{
-      header("location:user-setting.php?noupdate=1");
+      send_message('no_up');
+      header("location:user-setting.php");
       exit;
     }
   }
@@ -135,7 +152,8 @@ if(isset($_POST['btn_user_edit'])){
     #----- edit wellcome post
 if(isset($_POST['btn_wel_edit'])){
   if(empty($_POST['edit_title_wel']) || empty($_POST['edit_content_wel'])){
-    header("location:special-posts.php?empty_w=1");
+    send_message('empty');
+    header("location:special-posts.php");
     exit;
   }
   else{
@@ -144,11 +162,13 @@ if(isset($_POST['btn_wel_edit'])){
     $query="UPDATE `welcome` SET `title` = '".$new_title."', `content` = '".$new_content."' WHERE `welcome`.`id` = 1;";
     $sendquery=mysqli_query($conn,$query);
     if($sendquery){
-      header("location:special-posts.php?okup_w=1");
+      send_message('ok_up');
+      header("location:special-posts.php");
       exit;
     }
     else{
-      header("location:special-posts.php?noup_w=1");
+      send_message('no_up');
+      header("location:special-posts.php");
       exit;
     }
   }
@@ -157,7 +177,8 @@ if(isset($_POST['btn_wel_edit'])){
     #----- edit about post
 if(isset($_POST['btn_about_edit'])){
   if(empty($_POST['edit_content_about'])){
-    header("location:special-posts.php?empty_a=1");
+    send_message('empty');
+    header("location:special-posts.php");
     exit;
   }
   else{
@@ -165,11 +186,13 @@ if(isset($_POST['btn_about_edit'])){
     $query="UPDATE `about_us` SET `content` = '".$new_content."' WHERE `about_us`.`id` = 1;";
     $sendquery=mysqli_query($conn,$query);
     if($sendquery){
-      header("location:special-posts.php?okup_a=1");
+      send_message('ok_up');
+      header("location:special-posts.php");
       exit;
     }
     else{
-      header("location:special-posts.php?noup_a=1");
+      send_message('no_up');
+      header("location:special-posts.php");
       exit;
     }
   }

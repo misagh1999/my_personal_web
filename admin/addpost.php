@@ -4,17 +4,11 @@
     <div class="jumbotron">
       <form action="check.php" method="post">
         <?php
-          if(isset($_GET['empty'])){
-            echo '<center><p class="text-danger">عنوان و یا متن خود را وارد نکرده اید.</p></center>';
-          }
-          if(isset($_GET['ok'])){
-            echo '<center><p class="text-success">ارسال با موفقیت انجام شد</p></center>';
-          }
-          if(isset($_GET['error'])){
-            echo '<center><p class="text-danger">متاسفانه ارسال نشد</p></center>';
-          }
+        if(isset($_SESSION['msg'])){
+          show_message();
+        }
          ?>
-         
+
         <div class="form-group text-right">
           <label for="title1">عنوان:</label>
           <input type="text" name="titlepost" id="title1" class="form-control">
