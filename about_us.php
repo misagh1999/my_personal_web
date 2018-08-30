@@ -27,7 +27,7 @@
               <h5 class="mt-2" style="color:blue;"><?php echo $author['lname']." ".$author['fname']; ?></h5>
             </div>
             <div class="card-body">
-              <img src="img/mypic.jpg" class="rounded-circle float-right ml-3 " alt="" style="width:80px;border:red 1px solid;">
+              <img src="img/pic.jpg" class="rounded-circle float-right ml-3 " alt="" style="width:80px;border:red 1px solid;">
               <p class="card-text text-justify"><?php echo nl2br($author['about']); ?></p>
             </div>
           </div><!--about author-->
