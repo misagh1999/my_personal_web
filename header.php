@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <script src="script/jquery.min.js"></script>
     <script src="script/bootstrap.js"></script>
+    <script src="script/ajax.js"></script>
   </head>
   <body>
 <style>
