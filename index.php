@@ -11,7 +11,7 @@ $wellcome=mysqli_fetch_assoc($wel_query);
 
       <div class="jumbotron text-justify rounded" style="background-color:orange;border:2px solid red">
         <h1><?php echo $wellcome['title']; ?></h1>
-        <p class="lead"><?php echo $wellcome['content']; ?></p>
+        <p class="lead"><?php echo nl2br($wellcome['content']); ?></p>
         <hr class="bg-danger">
         <a class="btn btn-info float-left" href="about_us.php">درباره سایت</a>
       </div><!-- jumbotron-->
